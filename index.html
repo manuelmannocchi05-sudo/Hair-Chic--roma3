@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --cream:#f5f0e8;
   --cream2:#ebe3d6;
@@ -53,6 +54,7 @@ button{
   font-family:inherit;
   cursor:pointer;
 }
+
 
 /* HEADER */
 
@@ -106,6 +108,7 @@ nav a:hover{
   color:white;
   font-size:27px;
 }
+
 
 /* HERO */
 
@@ -184,6 +187,7 @@ nav a:hover{
   color:var(--dark);
 }
 
+
 /* INTRO */
 
 .section{
@@ -232,6 +236,7 @@ nav a:hover{
   transform:scale(1.04);
 }
 
+
 /* EXPERIENCE */
 
 .dark-section{
@@ -274,6 +279,7 @@ nav a:hover{
   color:#aaa;
   font-size:12px;
 }
+
 
 /* SERVICES */
 
@@ -318,6 +324,7 @@ nav a:hover{
   font-size:14px;
 }
 
+
 /* GALLERY */
 
 .gallery{
@@ -342,11 +349,140 @@ nav a:hover{
   transform:scale(1.05);
 }
 
-.g1{grid-column:span 5;grid-row:span 2}
-.g2{grid-column:span 4}
-.g3{grid-column:span 3}
-.g4{grid-column:span 3}
-.g5{grid-column:span 4}
+.g1{
+  grid-column:span 5;
+  grid-row:span 2;
+}
+
+.g2{
+  grid-column:span 4;
+}
+
+.g3{
+  grid-column:span 3;
+}
+
+.g4{
+  grid-column:span 3;
+}
+
+.g5{
+  grid-column:span 4;
+}
+
+
+/* RECENSIONI */
+
+.reviews-section{
+  background:var(--dark);
+  color:white;
+  padding:120px 7%;
+  text-align:center;
+}
+
+.reviews-header{
+  max-width:760px;
+  margin:0 auto 60px;
+}
+
+.reviews-header .eyebrow{
+  color:var(--gold);
+}
+
+.reviews-header h2{
+  font-size:clamp(48px,6vw,75px);
+  line-height:.95;
+  margin-bottom:25px;
+}
+
+.reviews-header p{
+  color:#bdb6ad;
+  font-size:15px;
+}
+
+.reviews-slider{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.review-card{
+  flex:1;
+  min-height:350px;
+  padding:50px 70px;
+  border:1px solid #4b4741;
+  background:#1b1a18;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.stars{
+  color:#f2c94c;
+  font-size:22px;
+  letter-spacing:5px;
+  margin-bottom:25px;
+}
+
+.review-text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:27px;
+  line-height:1.4;
+  color:#eee9e2;
+  max-width:850px;
+}
+
+.review-author{
+  margin-top:28px;
+  color:var(--gold);
+  font-size:13px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.review-arrow{
+  flex-shrink:0;
+  width:52px;
+  height:52px;
+  border:1px solid #625d55;
+  background:transparent;
+  color:white;
+  font-size:34px;
+  line-height:1;
+  transition:.3s;
+}
+
+.review-arrow:hover{
+  background:var(--gold);
+  border-color:var(--gold);
+}
+
+.review-dots{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:28px;
+}
+
+.review-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#625d55;
+  border:0;
+  padding:0;
+  transition:.3s;
+}
+
+.review-dot.active{
+  width:24px;
+  border-radius:10px;
+  background:var(--gold);
+}
+
 
 /* QUOTE */
 
@@ -366,6 +502,7 @@ nav a:hover{
   margin-top:20px;
   color:var(--muted);
 }
+
 
 /* BOOKING */
 
@@ -412,6 +549,7 @@ nav a:hover{
   display:block;
   margin-top:5px;
 }
+
 
 /* CONTACT */
 
@@ -462,6 +600,7 @@ nav a:hover{
   border:0;
 }
 
+
 /* FOOTER */
 
 footer{
@@ -478,6 +617,7 @@ footer{
 footer strong{
   color:white;
 }
+
 
 /* FLOATING BUTTON */
 
@@ -496,6 +636,7 @@ footer strong{
   text-transform:uppercase;
   border:none;
 }
+
 
 /* MODAL */
 
@@ -544,6 +685,7 @@ footer strong{
   margin-bottom:30px;
 }
 
+
 /* BOOKING STEPS */
 
 .step{
@@ -559,6 +701,7 @@ footer strong{
   font-size:28px;
   margin-bottom:18px;
 }
+
 
 /* SERVICE */
 
@@ -592,6 +735,7 @@ footer strong{
   color:#777;
   font-size:12px;
 }
+
 
 /* CALENDAR */
 
@@ -661,6 +805,7 @@ footer strong{
   border-color:var(--gold);
 }
 
+
 /* TIMES */
 
 .selected-date{
@@ -687,6 +832,7 @@ footer strong{
   color:white;
   border-color:var(--gold);
 }
+
 
 /* FORM */
 
@@ -733,6 +879,7 @@ footer strong{
   color:#333;
 }
 
+
 /* CONFIRMATION */
 
 .confirmation{
@@ -761,6 +908,7 @@ footer strong{
   color:#777;
   margin-top:10px;
 }
+
 
 /* MOBILE */
 
@@ -831,7 +979,28 @@ footer strong{
     height:400px;
     min-height:400px;
   }
+
+  .reviews-slider{
+    gap:8px;
+  }
+
+  .review-card{
+    padding:35px 20px;
+    min-height:390px;
+  }
+
+  .review-text{
+    font-size:23px;
+  }
+
+  .review-arrow{
+    width:38px;
+    height:38px;
+    font-size:25px;
+  }
+
 }
+
 
 @media(max-width:600px){
 
@@ -872,31 +1041,68 @@ footer strong{
     right:15px;
     text-align:center;
   }
+
+  .reviews-section{
+    padding:90px 6%;
+  }
+
+  .reviews-header h2{
+    font-size:48px;
+  }
+
+  .review-card{
+    min-height:420px;
+    padding:30px 15px;
+  }
+
+  .review-text{
+    font-size:21px;
+  }
+
+  .stars{
+    font-size:18px;
+    letter-spacing:3px;
+  }
+
 }
+
 </style>
 </head>
 
 <body>
 
+
 <header>
+
   <a href="#" class="logo">HAIR CHIC</a>
 
   <button class="menu" onclick="toggleMenu()">☰</button>
 
   <nav id="nav">
+
     <a href="#salone">Il salone</a>
+
     <a href="#servizi">Servizi</a>
+
     <a href="#galleria">Galleria</a>
+
+    <a href="#recensioni">Recensioni</a>
+
     <a href="#contatti">Contatti</a>
+
     <a href="javascript:void(0)" onclick="openBooking()" class="nav-book">
       Prenota
     </a>
+
   </nav>
+
 </header>
+
 
 <!-- HERO -->
 
 <section class="hero">
+
   <div class="hero-content">
 
     <small>Hair Chic · Roma</small>
@@ -912,6 +1118,7 @@ footer strong{
     </p>
 
     <div class="buttons">
+
       <a href="javascript:void(0)" onclick="openBooking()" class="btn btn-gold">
         Prenota il tuo appuntamento
       </a>
@@ -919,10 +1126,13 @@ footer strong{
       <a href="#salone" class="btn btn-outline">
         Scopri il salone
       </a>
+
     </div>
 
   </div>
+
 </section>
+
 
 <!-- INTRO -->
 
@@ -955,14 +1165,17 @@ footer strong{
     </div>
 
     <div class="image-box">
+
       <img
         src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=85"
         alt="Interno salone Hair Chic">
+
     </div>
 
   </div>
 
 </section>
+
 
 <!-- EXPERIENCE -->
 
@@ -971,9 +1184,11 @@ footer strong{
   <div class="experience">
 
     <div class="image-box">
+
       <img
         src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=85"
         alt="Servizio capelli">
+
     </div>
 
     <div>
@@ -1018,6 +1233,7 @@ footer strong{
 
 </section>
 
+
 <!-- SERVICES -->
 
 <section class="section" id="servizi">
@@ -1041,62 +1257,92 @@ footer strong{
   <div class="services">
 
     <div class="service">
+
       <span class="service-number">01</span>
+
       <h3>Hair Style</h3>
+
       <p>
         Taglio e styling personalizzati in base alla forma del viso,
         allo stile e alle esigenze quotidiane.
       </p>
+
     </div>
 
+
     <div class="service">
+
       <span class="service-number">02</span>
+
       <h3>Colore</h3>
+
       <p>
         Soluzioni cromatiche studiate per valorizzare il tuo look
         e ottenere un risultato armonioso.
       </p>
+
     </div>
 
+
     <div class="service">
+
       <span class="service-number">03</span>
+
       <h3>Styling</h3>
+
       <p>
         Piega e styling per un risultato curato e personalizzato
         in ogni occasione.
       </p>
+
     </div>
 
+
     <div class="service">
+
       <span class="service-number">04</span>
+
       <h3>Beauty</h3>
+
       <p>
         Servizi dedicati alla cura e alla valorizzazione
         della tua immagine.
       </p>
+
     </div>
 
+
     <div class="service">
+
       <span class="service-number">05</span>
+
       <h3>Consulenza</h3>
+
       <p>
         Un momento per capire insieme quale stile,
         colore o trattamento sia più adatto a te.
       </p>
+
     </div>
 
+
     <div class="service">
+
       <span class="service-number">06</span>
+
       <h3>Il tuo Look</h3>
+
       <p>
         Un servizio personalizzato costruito intorno
         alle tue esigenze.
       </p>
+
     </div>
 
   </div>
 
 </section>
+
 
 <!-- GALLERY -->
 
@@ -1111,44 +1357,121 @@ footer strong{
   <div class="gallery">
 
     <div class="gallery-item g1">
+
       <img
         src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1200&q=85"
         alt="Hair Chic">
+
     </div>
 
+
     <div class="gallery-item g2">
+
       <img
         src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85"
         alt="Hair style">
+
     </div>
 
+
     <div class="gallery-item g3">
+
       <img
         src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1000&q=85"
         alt="Capelli">
+
     </div>
 
+
     <div class="gallery-item g4">
+
       <img
         src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=85"
         alt="Beauty">
+
     </div>
 
+
     <div class="gallery-item g5">
+
       <img
         src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=85"
         alt="Salone">
+
     </div>
 
   </div>
 
 </section>
 
+
+<!-- RECENSIONI -->
+
+<section class="reviews-section" id="recensioni">
+
+  <div class="reviews-header">
+
+    <div class="eyebrow">
+      Le parole dei nostri clienti
+    </div>
+
+    <h2>
+      Esperienze che<br>
+      parlano di noi.
+    </h2>
+
+    <p>
+      Alcune delle esperienze condivise dai nostri clienti.
+    </p>
+
+  </div>
+
+
+  <div class="reviews-slider">
+
+    <button
+      class="review-arrow"
+      onclick="changeReview(-1)"
+      aria-label="Recensione precedente">
+      ‹
+    </button>
+
+
+    <div class="review-card">
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <p class="review-text" id="reviewText"></p>
+
+      <div class="review-author" id="reviewAuthor"></div>
+
+    </div>
+
+
+    <button
+      class="review-arrow"
+      onclick="changeReview(1)"
+      aria-label="Recensione successiva">
+      ›
+    </button>
+
+  </div>
+
+
+  <div class="review-dots" id="reviewDots"></div>
+
+</section>
+
+
 <!-- QUOTE -->
 
 <section class="quote">
 
-  <div class="eyebrow">Hair Chic</div>
+  <div class="eyebrow">
+    Hair Chic
+  </div>
 
   <h2>
     “Il vero stile è sentirsi bene
@@ -1161,11 +1484,14 @@ footer strong{
 
 </section>
 
+
 <!-- BOOKING -->
 
 <section class="section booking-section">
 
-  <div class="eyebrow">Prenotazione online</div>
+  <div class="eyebrow">
+    Prenotazione online
+  </div>
 
   <h2>
     Il tuo prossimo appuntamento
@@ -1177,30 +1503,54 @@ footer strong{
     e invia la tua richiesta direttamente online.
   </p>
 
+
   <div class="booking-info">
 
     <div>
+
       <span>Indirizzo</span>
-      <strong>Via Emanuele Filiberto 24, Roma</strong>
+
+      <strong>
+        Via Emanuele Filiberto 24, Roma
+      </strong>
+
     </div>
 
+
     <div>
+
       <span>Telefono</span>
-      <strong>06 9727 6248</strong>
+
+      <strong>
+        06 9727 6248
+      </strong>
+
     </div>
 
+
     <div>
+
       <span>Orari</span>
-      <strong>Lun – Sab · 09:00 – 19:00</strong>
+
+      <strong>
+        Lun – Sab · 09:00 – 19:00
+      </strong>
+
     </div>
 
   </div>
 
-  <button onclick="openBooking()" class="btn btn-gold">
+
+  <button
+    onclick="openBooking()"
+    class="btn btn-gold">
+
     Prenota il tuo appuntamento
+
   </button>
 
 </section>
+
 
 <!-- CONTACT -->
 
@@ -1208,30 +1558,54 @@ footer strong{
 
   <div class="contact-info">
 
-    <div class="eyebrow">Dove trovarci</div>
+    <div class="eyebrow">
+      Dove trovarci
+    </div>
 
     <h2>
       Vieni a<br>
       trovarci.
     </h2>
 
+
     <div class="contact-line">
+
       <span>Indirizzo</span>
-      <strong>Via Emanuele Filiberto 24, Roma</strong>
+
+      <strong>
+        Via Emanuele Filiberto 24, Roma
+      </strong>
+
     </div>
 
+
     <div class="contact-line">
+
       <span>Telefono</span>
-      <strong>06 9727 6248</strong>
+
+      <strong>
+        06 9727 6248
+      </strong>
+
     </div>
 
+
     <div class="contact-line">
+
       <span>Orari</span>
-      <strong>Lunedì – Sabato · 09:00 – 19:00</strong>
-      <strong>Domenica · Chiuso</strong>
+
+      <strong>
+        Lunedì – Sabato · 09:00 – 19:00
+      </strong>
+
+      <strong>
+        Domenica · Chiuso
+      </strong>
+
     </div>
 
   </div>
+
 
   <div class="map">
 
@@ -1244,18 +1618,23 @@ footer strong{
 
 </section>
 
+
 <!-- FOOTER -->
 
 <footer>
 
   <div>
+
     <strong>HAIR CHIC</strong><br>
     Roma
+
   </div>
+
 
   <div>
     Via Emanuele Filiberto 24 · Roma
   </div>
+
 
   <div>
     © 2026 Hair Chic
@@ -1263,11 +1642,17 @@ footer strong{
 
 </footer>
 
+
 <!-- FLOATING BOOKING -->
 
-<button class="floating-book" onclick="openBooking()">
+<button
+  class="floating-book"
+  onclick="openBooking()">
+
   Prenota il tuo appuntamento
+
 </button>
+
 
 <!-- BOOKING MODAL -->
 
@@ -1275,7 +1660,14 @@ footer strong{
 
   <div class="modal-box">
 
-    <button class="close" onclick="closeBooking()">×</button>
+    <button
+      class="close"
+      onclick="closeBooking()">
+      ×
+    </button>
+
+
+    <!-- STEP 1 -->
 
     <div id="stepService" class="step active">
 
@@ -1285,35 +1677,80 @@ footer strong{
         Inizia scegliendo il servizio che desideri.
       </p>
 
+
       <div class="step-title">
         1. Scegli il servizio
       </div>
 
+
       <div class="service-select">
 
-        <button class="service-option" onclick="selectService(this,'Hair Style')">
-          <strong>Hair Style</strong>
-          <span>Taglio e styling</span>
+
+        <button
+          class="service-option"
+          onclick="selectService(this,'Hair Style')">
+
+          <strong>
+            Hair Style
+          </strong>
+
+          <span>
+            Taglio e styling
+          </span>
+
         </button>
 
-        <button class="service-option" onclick="selectService(this,'Colore')">
-          <strong>Colore</strong>
-          <span>Colore personalizzato</span>
+
+        <button
+          class="service-option"
+          onclick="selectService(this,'Colore')">
+
+          <strong>
+            Colore
+          </strong>
+
+          <span>
+            Colore personalizzato
+          </span>
+
         </button>
 
-        <button class="service-option" onclick="selectService(this,'Styling')">
-          <strong>Styling</strong>
-          <span>Piega e styling</span>
+
+        <button
+          class="service-option"
+          onclick="selectService(this,'Styling')">
+
+          <strong>
+            Styling
+          </strong>
+
+          <span>
+            Piega e styling
+          </span>
+
         </button>
 
-        <button class="service-option" onclick="selectService(this,'Beauty')">
-          <strong>Beauty</strong>
-          <span>Servizio beauty</span>
+
+        <button
+          class="service-option"
+          onclick="selectService(this,'Beauty')">
+
+          <strong>
+            Beauty
+          </strong>
+
+          <span>
+            Servizio beauty
+          </span>
+
         </button>
 
       </div>
 
     </div>
+
+
+    <!-- STEP 2 -->
 
     <div id="stepCalendar" class="step">
 
@@ -1321,17 +1758,27 @@ footer strong{
         2. Scegli il giorno
       </div>
 
+
       <div class="calendar-head">
 
-        <button onclick="previousMonth()">‹</button>
+        <button onclick="previousMonth()">
+          ‹
+        </button>
 
-        <div class="calendar-title" id="calendarTitle"></div>
+        <div
+          class="calendar-title"
+          id="calendarTitle">
+        </div>
 
-        <button onclick="nextMonth()">›</button>
+        <button onclick="nextMonth()">
+          ›
+        </button>
 
       </div>
 
+
       <div class="calendar-week">
+
         <span>Lun</span>
         <span>Mar</span>
         <span>Mer</span>
@@ -1339,11 +1786,19 @@ footer strong{
         <span>Ven</span>
         <span>Sab</span>
         <span>Dom</span>
+
       </div>
 
-      <div class="calendar-grid" id="calendarGrid"></div>
+
+      <div
+        class="calendar-grid"
+        id="calendarGrid">
+      </div>
 
     </div>
+
+
+    <!-- STEP 3 -->
 
     <div id="stepTime" class="step">
 
@@ -1351,11 +1806,22 @@ footer strong{
         3. Scegli l'orario
       </div>
 
-      <div class="selected-date" id="selectedDate"></div>
 
-      <div class="times" id="times"></div>
+      <div
+        class="selected-date"
+        id="selectedDate">
+      </div>
+
+
+      <div
+        class="times"
+        id="times">
+      </div>
 
     </div>
+
+
+    <!-- STEP 4 -->
 
     <div id="stepForm" class="step">
 
@@ -1363,48 +1829,85 @@ footer strong{
         4. I tuoi dati
       </div>
 
+
       <div class="form">
 
         <label>
+
           Nome e cognome
-          <input id="name" type="text" placeholder="Il tuo nome">
+
+          <input
+            id="name"
+            type="text"
+            placeholder="Il tuo nome">
+
         </label>
 
+
         <label>
+
           Numero di telefono
-          <input id="phone" type="tel" placeholder="Il tuo numero">
+
+          <input
+            id="phone"
+            type="tel"
+            placeholder="Il tuo numero">
+
         </label>
 
       </div>
 
+
       <div class="form-buttons">
 
-        <button class="modal-btn back-btn" onclick="showStep('stepTime')">
+        <button
+          class="modal-btn back-btn"
+          onclick="showStep('stepTime')">
+
           Indietro
+
         </button>
 
-        <button class="modal-btn" onclick="confirmBooking()">
+
+        <button
+          class="modal-btn"
+          onclick="confirmBooking()">
+
           Conferma appuntamento
+
         </button>
 
       </div>
 
     </div>
 
-    <div id="stepConfirmation" class="step">
+
+    <!-- CONFERMA -->
+
+    <div
+      id="stepConfirmation"
+      class="step">
 
       <div class="confirmation">
 
-        <div class="check">✓</div>
+        <div class="check">
+          ✓
+        </div>
 
-        <h2>Richiesta inviata</h2>
+        <h2>
+          Richiesta inviata
+        </h2>
 
         <p id="confirmationText"></p>
 
         <br>
 
-        <button class="modal-btn" onclick="closeBooking()">
+        <button
+          class="modal-btn"
+          onclick="closeBooking()">
+
           Chiudi
+
         </button>
 
       </div>
@@ -1415,12 +1918,18 @@ footer strong{
 
 </div>
 
+
 <script>
+
 
 /* MENU */
 
 function toggleMenu(){
-  document.getElementById("nav").classList.toggle("open");
+
+  document
+    .getElementById("nav")
+    .classList.toggle("open");
+
 }
 
 
@@ -1429,6 +1938,7 @@ function toggleMenu(){
 let selectedService = "";
 let selectedDate = "";
 let selectedTime = "";
+
 
 function openBooking(){
 
@@ -1440,6 +1950,7 @@ function openBooking(){
 
 }
 
+
 function closeBooking(){
 
   document
@@ -1448,32 +1959,42 @@ function closeBooking(){
 
 }
 
+
 function showStep(id){
 
-  document.querySelectorAll(".step").forEach(step=>{
-    step.classList.remove("active");
-  });
+  document
+    .querySelectorAll(".step")
+    .forEach(step=>{
+      step.classList.remove("active");
+    });
 
-  document.getElementById(id).classList.add("active");
+  document
+    .getElementById(id)
+    .classList.add("active");
 
 }
 
 
 /* SERVICE */
 
-function selectService(button, service){
+function selectService(button,service){
 
   selectedService = service;
 
-  document.querySelectorAll(".service-option").forEach(btn=>{
-    btn.classList.remove("selected");
-  });
+  document
+    .querySelectorAll(".service-option")
+    .forEach(btn=>{
+      btn.classList.remove("selected");
+    });
 
   button.classList.add("selected");
 
   setTimeout(()=>{
+
     showStep("stepCalendar");
+
     renderCalendar();
+
   },200);
 
 }
@@ -1483,12 +2004,18 @@ function selectService(button, service){
 
 let calendarDate = new Date();
 
+
 function renderCalendar(){
 
-  const year = calendarDate.getFullYear();
-  const month = calendarDate.getMonth();
+  const year =
+    calendarDate.getFullYear();
+
+  const month =
+    calendarDate.getMonth();
+
 
   const monthNames = [
+
     "Gennaio",
     "Febbraio",
     "Marzo",
@@ -1501,47 +2028,67 @@ function renderCalendar(){
     "Ottobre",
     "Novembre",
     "Dicembre"
+
   ];
 
-  document.getElementById("calendarTitle").innerText =
-    monthNames[month] + " " + year;
 
-  const grid = document.getElementById("calendarGrid");
+  document
+    .getElementById("calendarTitle")
+    .innerText =
+      monthNames[month] + " " + year;
+
+
+  const grid =
+    document.getElementById("calendarGrid");
 
   grid.innerHTML = "";
 
-  const firstDay = new Date(year,month,1).getDay();
 
-  let start = firstDay === 0 ? 6 : firstDay - 1;
+  const firstDay =
+    new Date(year,month,1).getDay();
+
+  let start =
+    firstDay === 0
+      ? 6
+      : firstDay - 1;
+
 
   const daysInMonth =
     new Date(year,month + 1,0).getDate();
 
+
   for(let i=0;i<start;i++){
 
-    const empty = document.createElement("div");
+    const empty =
+      document.createElement("div");
 
     grid.appendChild(empty);
 
   }
 
+
   for(let day=1;day<=daysInMonth;day++){
 
-    const date = new Date(year,month,day);
+    const date =
+      new Date(year,month,day);
 
-    const button = document.createElement("button");
+    const button =
+      document.createElement("button");
 
     button.className = "day";
 
     button.innerText = day;
 
-    /* Domenica chiusa */
+
+    /* DOMENICA CHIUSA */
 
     if(date.getDay() === 0){
 
       button.classList.add("disabled");
 
-    }else{
+    }
+
+    else{
 
       button.onclick = function(){
 
@@ -1550,6 +2097,7 @@ function renderCalendar(){
       };
 
     }
+
 
     grid.appendChild(button);
 
@@ -1585,15 +2133,22 @@ function nextMonth(){
 function selectDate(date){
 
   selectedDate =
-    date.toLocaleDateString("it-IT",{
-      weekday:"long",
-      day:"numeric",
-      month:"long",
-      year:"numeric"
-    });
+    date.toLocaleDateString(
+      "it-IT",
+      {
+        weekday:"long",
+        day:"numeric",
+        month:"long",
+        year:"numeric"
+      }
+    );
 
-  document.getElementById("selectedDate").innerText =
-    selectedDate;
+
+  document
+    .getElementById("selectedDate")
+    .innerText =
+      selectedDate;
+
 
   createTimes();
 
@@ -1611,6 +2166,7 @@ function createTimes(){
 
   container.innerHTML = "";
 
+
   /*
     ORARI DIMOSTRATIVI.
     Successivamente questi saranno sostituiti
@@ -1618,6 +2174,7 @@ function createTimes(){
   */
 
   const times = [
+
     "09:00",
     "09:30",
     "10:00",
@@ -1636,7 +2193,9 @@ function createTimes(){
     "17:30",
     "18:00",
     "18:30"
+
   ];
+
 
   times.forEach(time=>{
 
@@ -1647,21 +2206,30 @@ function createTimes(){
 
     button.innerText = time;
 
+
     button.onclick = function(){
 
       selectedTime = time;
 
-      document.querySelectorAll(".time").forEach(btn=>{
-        btn.classList.remove("selected");
-      });
+
+      document
+        .querySelectorAll(".time")
+        .forEach(btn=>{
+          btn.classList.remove("selected");
+        });
+
 
       button.classList.add("selected");
 
+
       setTimeout(()=>{
+
         showStep("stepForm");
+
       },200);
 
     };
+
 
     container.appendChild(button);
 
@@ -1675,10 +2243,18 @@ function createTimes(){
 function confirmBooking(){
 
   const name =
-    document.getElementById("name").value.trim();
+    document
+      .getElementById("name")
+      .value
+      .trim();
+
 
   const phone =
-    document.getElementById("phone").value.trim();
+    document
+      .getElementById("phone")
+      .value
+      .trim();
+
 
   if(!name){
 
@@ -1688,6 +2264,7 @@ function confirmBooking(){
 
   }
 
+
   if(!phone){
 
     alert("Inserisci il tuo numero di telefono.");
@@ -1696,15 +2273,32 @@ function confirmBooking(){
 
   }
 
-  document.getElementById("confirmationText").innerHTML =
-    "Ciao " + name + "!<br><br>" +
-    "Hai selezionato:<br>" +
-    "<strong>" + selectedService + "</strong><br>" +
-    selectedDate + "<br>" +
-    "ore <strong>" + selectedTime + "</strong><br><br>" +
-    "Questa è una demo del sistema di prenotazione. " +
-    "Il collegamento alle disponibilità reali del salone " +
-    "verrà aggiunto successivamente.";
+
+  document
+    .getElementById("confirmationText")
+    .innerHTML =
+
+      "Ciao " + name + "!<br><br>" +
+
+      "Hai selezionato:<br>" +
+
+      "<strong>" +
+      selectedService +
+      "</strong><br>" +
+
+      selectedDate +
+      "<br>" +
+
+      "ore <strong>" +
+      selectedTime +
+      "</strong><br><br>" +
+
+      "Questa è una demo del sistema di prenotazione. " +
+
+      "Il collegamento alle disponibilità reali del salone " +
+
+      "verrà aggiunto successivamente.";
+
 
   showStep("stepConfirmation");
 
@@ -1715,13 +2309,147 @@ function confirmBooking(){
 
 document
   .getElementById("bookingModal")
-  .addEventListener("click",function(e){
+  .addEventListener(
+    "click",
+    function(e){
 
-    if(e.target === this){
-      closeBooking();
+      if(e.target === this){
+
+        closeBooking();
+
+      }
+
+    }
+  );
+
+
+/* RECENSIONI */
+
+const reviews = [
+
+  {
+    name:"Ida De Cresce",
+    text:"È da tempo che mi servo da Patrizio e devo dire che sono sempre rimasta soddisfatta sia del taglio che il colore. Sabato per la prima volta è stata la moglie con colore e taglio e devo dire è stata GRANDIOSA!!! GRAZIE!!!"
+  },
+
+  {
+    name:"Alessandro Berti",
+    text:"Posto molto accogliente. Patrizio grandissimo professionista e fantastica persona. Sono venuto delle volte per farmi un taglio veloce oppure la semi permanente, e devo dire che è sempre stato impeccabile. Vengo sempre volentieri e ci tornerò sicuramente."
+  },
+
+  {
+    name:"Sofia Liu",
+    text:"Oggi è stata la mia prima volta in questa parrucchieria e, rispetto ad altre in cui sono stato, devo dire che qui il servizio è davvero eccellente. I materiali sono pulitissimi, tutti sono estremamente gentili e disponibili, puoi venire con appuntamento e pure senza (ovviamente se sei senza appuntamento aspetti un pochino). Si percepisce la cura e la professionalità con cui trattano ogni cliente e ogni dettaglio del taglio. L'ambiente è accogliente, serio e allo stesso tempo caloroso: davvero consigliatissimo! In più i prezzi sono molto onesti e convenienti, perciò sicuramente tornerò di nuovo."
+  },
+
+  {
+    name:"Alex Alex",
+    text:"In 2 parole.. Assolutamente ECCEZIONALE!!! Grandioso per i bambini!!! Ho scoperto Patrizio per caso, visto che mio figlio di 4 anni era sempre restio a farsi toccare i capelli, ma finalmente aveva chiesto di tagliarli. Detto fatto, siamo andati da Patrizio e ci torneremo sempre!!! Patrizio è uno dei pochi parrucchieri a fare esattamente quello che gli chiedi, chiedendo conferma sul modo di procedere passo passo, senza prendersi libertà personali. Ascolta e lavora con GRANDISSIMA CURA e ABILITÀ. Un vero PROFESSIONISTA!!! Taglio perfetto e bimbo soddisfattissimo! Alla prossima!!!"
+  },
+
+  {
+    name:"Patrizia Scarlett Pelliccioni",
+    text:"Cortesia e professionalità uniti all'utilizzo di ottimi prodotti. Il titolare, Patrizio, che vive in Italia da diversi anni, è una persona gentile e affabile. In questo momento storico conviene telefonare e prenotarsi. Il rapporto qualità prezzo è buono. Consiglio!"
+  },
+
+  {
+    name:"Marco Di Pietro",
+    text:"Sono 15 anni che vado da Patrizio, sempre disponibile, lo conosco da tanto tempo e anche se ho cambiato zona, continuo a venire qui a Piazza Vittorio, ottima professionalità."
+  }
+
+];
+
+
+let currentReview = 0;
+
+
+function showReview(index){
+
+  if(index < 0){
+
+    currentReview = reviews.length - 1;
+
+  }
+
+  else if(index >= reviews.length){
+
+    currentReview = 0;
+
+  }
+
+  else{
+
+    currentReview = index;
+
+  }
+
+
+  document
+    .getElementById("reviewText")
+    .innerText =
+      "“" +
+      reviews[currentReview].text +
+      "”";
+
+
+  document
+    .getElementById("reviewAuthor")
+    .innerText =
+      reviews[currentReview].name;
+
+
+  createReviewDots();
+
+}
+
+
+function changeReview(direction){
+
+  showReview(currentReview + direction);
+
+}
+
+
+function createReviewDots(){
+
+  const dots =
+    document.getElementById("reviewDots");
+
+  dots.innerHTML = "";
+
+
+  reviews.forEach((review,index)=>{
+
+    const dot =
+      document.createElement("button");
+
+    dot.className = "review-dot";
+
+
+    if(index === currentReview){
+
+      dot.classList.add("active");
+
     }
 
+
+    dot.onclick = function(){
+
+      showReview(index);
+
+    };
+
+
+    dots.appendChild(dot);
+
   });
+
+}
+
+
+/* AVVIO RECENSIONI */
+
+showReview(0);
 
 </script>
 
