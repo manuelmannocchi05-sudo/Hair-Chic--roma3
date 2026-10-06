@@ -1,1 +1,366 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Hair Chic | Parrucchiere Roma</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f1e9;
+  color: #211e1b;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(246,241,233,0.96);
+  border-bottom: 1px solid #ded5c9;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  letter-spacing: 3px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #211e1b;
+  margin-left: 30px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 150px 7% 80px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(rgba(25,20,17,.55), rgba(25,20,17,.55)),
+    url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=2000&q=90")
+    center/cover;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.small-title {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: clamp(65px, 10vw, 125px);
+  line-height: .88;
+  margin-bottom: 30px;
+}
+
+.hero p {
+  max-width: 500px;
+  font-size: 19px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 30px;
+  background: #b9965c;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  transition: .3s;
+}
+
+.button:hover {
+  background: #8f703e;
+  transform: translateY(-2px);
+}
+
+section {
+  padding: 110px 7%;
+}
+
+.intro {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.intro h2,
+.contact h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: clamp(45px, 6vw, 70px);
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.intro p {
+  color: #625b54;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.services {
+  background: #211e1b;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: clamp(45px, 6vw, 65px);
+}
+
+.cards {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  min-height: 250px;
+  padding: 40px 30px;
+  border: 1px solid #4d4842;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.number {
+  color: #b9965c;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  font-family: Georgia, serif;
+  font-size: 31px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #cfc6bc;
+  line-height: 1.7;
+}
+
+.contact {
+  text-align: center;
+  background: #eee6dc;
+}
+
+.contact-info {
+  margin: 35px auto;
+  max-width: 500px;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.contact-info div {
+  margin-bottom: 20px;
+}
+
+footer {
+  padding: 30px;
+  background: #211e1b;
+  color: #cfc6bc;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+
+  header {
+    padding: 18px 5%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  section {
+    padding: 80px 6%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 90vh;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">HAIR CHIC</div>
+
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#salone">IL SALONE</a>
+    <a href="#servizi">SERVIZI</a>
+    <a href="#contatti">CONTATTI</a>
+  </nav>
+
+</header>
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="small-title">
+      Roma · Via Emanuele Filiberto
+    </div>
+
+    <h1>
+      Hair<br>Chic
+    </h1>
+
+    <p>
+      Il tuo stile, la tua firma.
+      Un luogo dedicato alla cura, alla bellezza
+      e alla valorizzazione dei tuoi capelli.
+    </p>
+
+    <a class="button" href="tel:0697276248">
+      Contattaci
+    </a>
+
+  </div>
+
+</section>
+
+<section id="salone">
+
+  <div class="intro">
+
+    <h2>
+      Il tuo stile<br>
+      inizia qui.
+    </h2>
+
+    <p>
+      Hair Chic ti aspetta a Roma, in Via Emanuele Filiberto 24.
+      Un ambiente dedicato alla cura dei capelli e alla ricerca
+      dello stile che ti rappresenta.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="services" id="servizi">
+
+  <div class="section-title">
+    <h2>I nostri servizi</h2>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="number">01</div>
+      <h3>Taglio</h3>
+      <p>
+        Cura e attenzione per valorizzare il tuo stile.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">02</div>
+      <h3>Styling</h3>
+      <p>
+        Un look pensato per esprimere la tua personalità.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">03</div>
+      <h3>Hair Care</h3>
+      <p>
+        Attenzione alla bellezza e alla cura dei tuoi capelli.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="contact" id="contatti">
+
+  <h2>Vieni a trovarci.</h2>
+
+  <div class="contact-info">
+
+    <div>
+      <strong>INDIRIZZO</strong><br>
+      Via Emanuele Filiberto 24, Roma
+    </div>
+
+    <div>
+      <strong>TELEFONO</strong><br>
+      06 9727 6248
+    </div>
+
+    <div>
+      <strong>ORARI</strong><br>
+      Lunedì – Sabato · 09:00 – 19:00<br>
+      Domenica · Chiuso
+    </div>
+
+  </div>
+
+  <a class="button" href="tel:0697276248">
+    Chiama Hair Chic
+  </a>
+
+</section>
+
+<footer>
+  © Hair Chic · Roma
+</footer>
+
+</body>
+</html>
