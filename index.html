@@ -4,363 +4,1587 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hair Chic | Parrucchiere Roma</title>
+<title>Hair Chic — Parrucchiere a Roma</title>
+
+<meta name="description"
+content="Hair Chic, salone di bellezza in Via Emanuele Filiberto 24 a Roma. Scopri il nostro spazio e prenota il tuo appuntamento.">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --cream:#f5f0e8;
+  --cream2:#ebe3d7;
+  --dark:#171614;
+  --dark2:#24211e;
+  --gold:#b99a68;
+  --gold2:#d1b789;
+  --text:#292622;
+  --muted:#77716a;
+  --white:#fff;
 }
 
-html {
-  scroll-behavior: smooth;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f6f1e9;
-  color: #211e1b;
+html{
+  scroll-behavior:smooth;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 22px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(246,241,233,0.96);
-  border-bottom: 1px solid #ded5c9;
-  z-index: 1000;
+body{
+  background:var(--cream);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  overflow-x:hidden;
 }
 
-.logo {
-  font-family: Georgia, serif;
-  font-size: 27px;
-  letter-spacing: 3px;
+img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
-nav a {
-  text-decoration: none;
-  color: #211e1b;
-  margin-left: 30px;
-  font-size: 12px;
-  letter-spacing: 1.5px;
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
-.hero {
-  min-height: 100vh;
-  padding: 150px 7% 80px;
-  display: flex;
-  align-items: center;
-  color: white;
+button{
+  font-family:inherit;
+}
+
+.container{
+  width:min(1200px,88%);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 6%;
+  z-index:1000;
+  color:white;
+  transition:.4s;
+}
+
+header.scrolled{
+  background:rgba(23,22,20,.96);
+  height:72px;
+  box-shadow:0 10px 35px rgba(0,0,0,.15);
+}
+
+.logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:34px;
+  letter-spacing:3px;
+  line-height:1;
+}
+
+.logo small{
+  display:block;
+  font-family:'Inter',sans-serif;
+  font-size:8px;
+  letter-spacing:4px;
+  text-align:center;
+  margin-top:5px;
+  opacity:.75;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:32px;
+}
+
+nav a{
+  font-size:11px;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  position:relative;
+}
+
+nav a:not(.nav-book)::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-7px;
+  width:0;
+  height:1px;
+  background:var(--gold2);
+  transition:.3s;
+}
+
+nav a:not(.nav-book):hover::after{
+  width:100%;
+}
+
+.nav-book{
+  padding:13px 20px;
+  border:1px solid rgba(255,255,255,.6);
+  transition:.3s;
+}
+
+.nav-book:hover{
+  background:white;
+  color:var(--dark);
+}
+
+/* MOBILE MENU */
+
+.menu-btn{
+  display:none;
+  border:0;
+  background:none;
+  color:white;
+  font-size:27px;
+  cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  color:white;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background-image:
+  url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=2200&q=90");
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.03);
+  animation:heroZoom 12s ease-out forwards;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
   background:
-    linear-gradient(rgba(25,20,17,.55), rgba(25,20,17,.55)),
-    url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=2000&q=90")
-    center/cover;
+  linear-gradient(90deg,rgba(15,14,13,.78),rgba(15,14,13,.30),rgba(15,14,13,.20)),
+  linear-gradient(0deg,rgba(15,14,13,.55),transparent 50%);
+  z-index:-1;
 }
 
-.hero-content {
-  max-width: 720px;
+@keyframes heroZoom{
+  from{transform:scale(1.08)}
+  to{transform:scale(1.03)}
 }
 
-.small-title {
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 12px;
-  margin-bottom: 25px;
+.hero-content{
+  width:min(850px,88%);
+  margin:auto;
+  padding-top:70px;
 }
 
-h1 {
-  font-family: Georgia, serif;
-  font-weight: normal;
-  font-size: clamp(65px, 10vw, 125px);
-  line-height: .88;
-  margin-bottom: 30px;
+.eyebrow{
+  font-size:11px;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  color:var(--gold2);
+  margin-bottom:25px;
+  animation:fadeUp .8s ease both;
 }
 
-.hero p {
-  max-width: 500px;
-  font-size: 19px;
-  line-height: 1.7;
-  margin-bottom: 35px;
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(75px,12vw,155px);
+  font-weight:400;
+  line-height:.76;
+  letter-spacing:-4px;
+  margin-left:-8px;
+  animation:fadeUp 1s .1s ease both;
 }
 
-.button {
-  display: inline-block;
-  padding: 16px 30px;
-  background: #b9965c;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 11px;
-  transition: .3s;
+.hero h1 span{
+  display:block;
+  font-size:.48em;
+  line-height:1.2;
+  letter-spacing:8px;
+  text-transform:uppercase;
+  margin-left:8px;
+  margin-top:22px;
 }
 
-.button:hover {
-  background: #8f703e;
-  transform: translateY(-2px);
+.hero-text{
+  max-width:520px;
+  margin-top:35px;
+  font-size:16px;
+  line-height:1.8;
+  color:rgba(255,255,255,.85);
+  animation:fadeUp 1s .2s ease both;
 }
 
-section {
-  padding: 110px 7%;
+.hero-buttons{
+  display:flex;
+  gap:15px;
+  margin-top:38px;
+  animation:fadeUp 1s .3s ease both;
 }
 
-.intro {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:50px;
+  padding:0 28px;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  transition:.3s;
+  cursor:pointer;
 }
 
-.intro h2,
-.contact h2 {
-  font-family: Georgia, serif;
-  font-weight: normal;
-  font-size: clamp(45px, 6vw, 70px);
-  line-height: 1;
-  margin-bottom: 30px;
+.btn-gold{
+  background:var(--gold);
+  color:white;
 }
 
-.intro p {
-  color: #625b54;
-  font-size: 18px;
-  line-height: 1.8;
+.btn-gold:hover{
+  background:#96794d;
+  transform:translateY(-3px);
 }
 
-.services {
-  background: #211e1b;
-  color: white;
+.btn-outline{
+  border:1px solid rgba(255,255,255,.6);
+  color:white;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 60px;
+.btn-outline:hover{
+  background:white;
+  color:var(--dark);
 }
 
-.section-title h2 {
-  font-family: Georgia, serif;
-  font-weight: normal;
-  font-size: clamp(45px, 6vw, 65px);
+.hero-scroll{
+  position:absolute;
+  bottom:32px;
+  right:6%;
+  writing-mode:vertical-rl;
+  font-size:9px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  opacity:.7;
 }
 
-.cards {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.card {
-  min-height: 250px;
-  padding: 40px 30px;
-  border: 1px solid #4d4842;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.number {
-  color: #b9965c;
-  font-size: 12px;
-  letter-spacing: 3px;
-  margin-bottom: 18px;
-}
-
-.card h3 {
-  font-family: Georgia, serif;
-  font-size: 31px;
-  font-weight: normal;
-  margin-bottom: 15px;
-}
-
-.card p {
-  color: #cfc6bc;
-  line-height: 1.7;
-}
-
-.contact {
-  text-align: center;
-  background: #eee6dc;
-}
-
-.contact-info {
-  margin: 35px auto;
-  max-width: 500px;
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-.contact-info div {
-  margin-bottom: 20px;
-}
-
-footer {
-  padding: 30px;
-  background: #211e1b;
-  color: #cfc6bc;
-  text-align: center;
-  font-size: 12px;
-}
-
-@media (max-width: 800px) {
-
-  header {
-    padding: 18px 5%;
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(25px);
   }
-
-  nav {
-    display: none;
-  }
-
-  section {
-    padding: 80px 6%;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    min-height: 90vh;
+  to{
+    opacity:1;
+    transform:translateY(0);
   }
 }
+
+/* ================= INTRO ================= */
+
+.intro{
+  padding:135px 0;
+  background:var(--cream);
+}
+
+.intro-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.4fr;
+  gap:100px;
+  align-items:start;
+}
+
+.section-label{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  padding-top:12px;
+}
+
+.intro h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(50px,6vw,82px);
+  font-weight:400;
+  line-height:.95;
+  margin-bottom:35px;
+}
+
+.intro-copy{
+  font-size:17px;
+  line-height:1.9;
+  color:var(--muted);
+  max-width:680px;
+}
+
+.intro-copy p+p{
+  margin-top:20px;
+}
+
+.signature{
+  margin-top:35px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;
+  color:var(--dark);
+}
+
+/* ================= IMAGE FEATURE ================= */
+
+.feature{
+  background:var(--dark);
+  color:white;
+  padding:0;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  min-height:650px;
+}
+
+.feature-image{
+  min-height:650px;
+  overflow:hidden;
+}
+
+.feature-image img{
+  transition:transform 1s ease;
+}
+
+.feature:hover .feature-image img{
+  transform:scale(1.04);
+}
+
+.feature-content{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:80px 12%;
+}
+
+.feature-content .section-label{
+  color:var(--gold2);
+}
+
+.feature-content h2{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:400;
+  font-size:clamp(48px,5vw,75px);
+  line-height:.95;
+  margin:25px 0;
+}
+
+.feature-content p{
+  color:#c7c0b7;
+  line-height:1.9;
+  max-width:500px;
+}
+
+.feature-list{
+  margin-top:35px;
+  border-top:1px solid #403c37;
+}
+
+.feature-item{
+  padding:18px 0;
+  border-bottom:1px solid #403c37;
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+.feature-item span:last-child{
+  color:var(--gold2);
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+  padding:135px 0;
+  background:var(--cream2);
+}
+
+.services-heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+  margin-bottom:70px;
+}
+
+.services-heading h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(55px,7vw,95px);
+  font-weight:400;
+  line-height:.85;
+}
+
+.services-heading p{
+  max-width:370px;
+  color:var(--muted);
+  line-height:1.7;
+  font-size:14px;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:#cfc6ba;
+  border:1px solid #cfc6ba;
+}
+
+.service{
+  background:var(--cream2);
+  padding:45px 35px;
+  min-height:280px;
+  position:relative;
+  transition:.4s;
+}
+
+.service:hover{
+  background:var(--dark);
+  color:white;
+  transform:translateY(-5px);
+}
+
+.service-number{
+  font-size:10px;
+  color:var(--gold);
+  letter-spacing:3px;
+}
+
+.service h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:36px;
+  font-weight:400;
+  margin:45px 0 15px;
+}
+
+.service p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+
+.service:hover p{
+  color:#cfc7bd;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+  padding:135px 0;
+  background:var(--cream);
+}
+
+.gallery-header{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 65px;
+}
+
+.gallery-header h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(55px,7vw,90px);
+  font-weight:400;
+  line-height:.9;
+  margin:20px 0;
+}
+
+.gallery-header p{
+  color:var(--muted);
+  line-height:1.8;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr .9fr;
+  grid-template-rows:280px 280px;
+  gap:15px;
+}
+
+.gallery-item{
+  overflow:hidden;
+  position:relative;
+  background:#d7cec2;
+}
+
+.gallery-item:first-child{
+  grid-row:span 2;
+}
+
+.gallery-item img{
+  transition:transform .8s ease;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.06);
+}
+
+.gallery-overlay{
+  position:absolute;
+  inset:auto 0 0;
+  padding:30px;
+  color:white;
+  background:linear-gradient(transparent,rgba(0,0,0,.65));
+  transform:translateY(10px);
+  opacity:0;
+  transition:.4s;
+}
+
+.gallery-item:hover .gallery-overlay{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.gallery-overlay span{
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+/* ================= QUOTE ================= */
+
+.quote{
+  padding:140px 8%;
+  background:var(--dark);
+  color:white;
+  text-align:center;
+}
+
+.quote-mark{
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:70px;
+  line-height:.5;
+}
+
+.quote h2{
+  max-width:1000px;
+  margin:35px auto;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(45px,6vw,78px);
+  font-weight:400;
+  line-height:1;
+}
+
+.quote p{
+  color:#aaa29a;
+  font-size:11px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+/* ================= BOOKING ================= */
+
+.booking{
+  padding:125px 0;
+  background:#e7ded2;
+}
+
+.booking-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:90px;
+  align-items:center;
+}
+
+.booking h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(55px,6vw,85px);
+  font-weight:400;
+  line-height:.9;
+  margin:20px 0 30px;
+}
+
+.booking p{
+  color:var(--muted);
+  max-width:500px;
+  line-height:1.8;
+}
+
+.booking-card{
+  background:var(--dark);
+  color:white;
+  padding:55px;
+  box-shadow:25px 25px 0 var(--gold);
+}
+
+.booking-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:38px;
+  font-weight:400;
+  margin-bottom:25px;
+}
+
+.booking-row{
+  padding:18px 0;
+  border-bottom:1px solid #3e3a35;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-size:12px;
+}
+
+.booking-row span:first-child{
+  color:#aaa29a;
+}
+
+.booking-card .btn{
+  margin-top:30px;
+  width:100%;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+  padding:125px 0 0;
+  background:var(--cream);
+}
+
+.contact-top{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.contact-top h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(55px,7vw,95px);
+  font-weight:400;
+  line-height:.9;
+  margin:20px 0;
+}
+
+.contact-top p{
+  color:var(--muted);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+}
+
+.contact-info{
+  padding:60px 10% 80px 0;
+}
+
+.info-block{
+  margin-bottom:40px;
+}
+
+.info-block label{
+  display:block;
+  color:var(--gold);
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.info-block p,
+.info-block a{
+  font-family:'Cormorant Garamond',serif;
+  font-size:27px;
+  line-height:1.2;
+}
+
+.info-block a:hover{
+  color:var(--gold);
+}
+
+.hours{
+  font-family:'Inter',sans-serif!important;
+  font-size:13px!important;
+  line-height:2!important;
+  color:var(--muted);
+}
+
+.map{
+  min-height:560px;
+  background:#ddd;
+}
+
+.map iframe{
+  width:100%;
+  height:100%;
+  min-height:560px;
+  border:0;
+  filter:grayscale(100%);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:var(--dark);
+  color:white;
+  padding:70px 6% 30px;
+}
+
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:start;
+  padding-bottom:60px;
+  border-bottom:1px solid #383531;
+}
+
+.footer-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:45px;
+  letter-spacing:3px;
+}
+
+.footer-copy{
+  color:#9b958d;
+  font-size:12px;
+  line-height:1.8;
+  max-width:300px;
+}
+
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding-top:25px;
+  color:#77716a;
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+/* ================= FLOATING BUTTON ================= */
+
+.floating-book{
+  position:fixed;
+  right:25px;
+  bottom:25px;
+  z-index:900;
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  background:var(--gold);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:8px;
+  line-height:1.3;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  transition:.3s;
+}
+
+.floating-book:hover{
+  transform:translateY(-5px) scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+  nav{
+    position:fixed;
+    top:72px;
+    left:0;
+    width:100%;
+    background:var(--dark);
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    padding:25px 7%;
+    gap:0;
+  }
+
+  nav.open{
+    display:flex;
+  }
+
+  nav a{
+    padding:16px 0;
+    border-bottom:1px solid #383531;
+  }
+
+  .nav-book{
+    margin-top:12px;
+    text-align:center;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .intro-grid,
+  .booking-grid{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .feature-image{
+    min-height:500px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .services-heading{
+    flex-direction:column;
+    align-items:start;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:300px 220px 220px;
+  }
+
+  .gallery-item:first-child{
+    grid-row:span 2;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-info{
+    padding:70px 7%;
+  }
+
+  .map,
+  .map iframe{
+    min-height:450px;
+  }
+
+  .footer-top,
+  .footer-bottom{
+    flex-direction:column;
+  }
+
+}
+
+@media(max-width:600px){
+
+  header{
+    height:70px;
+    padding:0 5%;
+  }
+
+  .logo{
+    font-size:27px;
+  }
+
+  .hero-content{
+    width:90%;
+  }
+
+  .hero h1{
+    font-size:76px;
+    letter-spacing:-2px;
+  }
+
+  .hero h1 span{
+    font-size:13px;
+    letter-spacing:5px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .intro,
+  .services,
+  .gallery,
+  .booking{
+    padding:90px 0;
+  }
+
+  .feature-content{
+    padding:70px 7%;
+  }
+
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:400px 250px 250px 250px 250px;
+  }
+
+  .gallery-item:first-child{
+    grid-row:auto;
+  }
+
+  .booking-card{
+    padding:35px 25px;
+    box-shadow:12px 12px 0 var(--gold);
+  }
+
+  .contact-top{
+    padding:0 7%;
+  }
+
+  .contact-top h2{
+    font-size:60px;
+  }
+
+  .floating-book{
+    width:58px;
+    height:58px;
+    right:17px;
+    bottom:17px;
+  }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
+<header id="header">
 
-  <div class="logo">HAIR CHIC</div>
+  <a href="#home" class="logo">
+    HAIR CHIC
+    <small>ROMA</small>
+  </a>
 
-  <nav>
-    <a href="#home">HOME</a>
-    <a href="#salone">IL SALONE</a>
-    <a href="#servizi">SERVIZI</a>
-    <a href="#contatti">CONTATTI</a>
+  <button class="menu-btn" id="menuBtn">☰</button>
+
+  <nav id="nav">
+    <a href="#salone">Il salone</a>
+    <a href="#servizi">Servizi</a>
+    <a href="#galleria">Galleria</a>
+    <a href="#contatti">Contatti</a>
+    <a href="#prenota" class="nav-book">Prenota ora</a>
   </nav>
 
 </header>
 
+
+<!-- HERO -->
+
 <section class="hero" id="home">
+
+  <div class="hero-bg"></div>
 
   <div class="hero-content">
 
-    <div class="small-title">
-      Roma · Via Emanuele Filiberto
+    <div class="eyebrow">
+      Via Emanuele Filiberto · Roma
     </div>
 
     <h1>
-      Hair<br>Chic
+      Hair Chic
+      <span>Beauty & Hair</span>
     </h1>
 
-    <p>
-      Il tuo stile, la tua firma.
-      Un luogo dedicato alla cura, alla bellezza
-      e alla valorizzazione dei tuoi capelli.
+    <p class="hero-text">
+      Un luogo dove bellezza, stile e cura dei dettagli
+      incontrano l'atmosfera di Roma.
     </p>
 
-    <a class="button" href="tel:0697276248">
-      Contattaci
-    </a>
+    <div class="hero-buttons">
+
+      <a href="#prenota" class="btn btn-gold">
+        Prenota ora
+      </a>
+
+      <a href="#galleria" class="btn btn-outline">
+        Scopri il salone
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="hero-scroll">
+    Scorri per scoprire
+  </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro" id="salone">
+
+  <div class="container">
+
+    <div class="intro-grid">
+
+      <div class="section-label">
+        Hair Chic · Roma
+      </div>
+
+      <div>
+
+        <h2>
+          La bellezza<br>
+          è nei dettagli.
+        </h2>
+
+        <div class="intro-copy">
+
+          <p>
+            Hair Chic ti aspetta in Via Emanuele Filiberto 24,
+            nel cuore di Roma.
+          </p>
+
+          <p>
+            Un ambiente pensato per dedicarti tempo,
+            attenzione e un momento tutto per te.
+          </p>
+
+          <p>
+            Scopri uno spazio dove il tuo prossimo look
+            può iniziare da una semplice consulenza.
+          </p>
+
+        </div>
+
+        <div class="signature">
+          Hair Chic
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
 </section>
 
-<section id="salone">
 
-  <div class="intro">
+<!-- FEATURE -->
 
-    <h2>
-      Il tuo stile<br>
-      inizia qui.
-    </h2>
+<section class="feature">
 
-    <p>
-      Hair Chic ti aspetta a Roma, in Via Emanuele Filiberto 24.
-      Un ambiente dedicato alla cura dei capelli e alla ricerca
-      dello stile che ti rappresenta.
-    </p>
+  <div class="feature-grid">
+
+    <div class="feature-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=90"
+        alt="Ambiente beauty"
+      >
+
+    </div>
+
+    <div class="feature-content">
+
+      <div class="section-label">
+        L'esperienza
+      </div>
+
+      <h2>
+        Il tuo momento.<br>
+        Il tuo stile.
+      </h2>
+
+      <p>
+        Dalla consulenza alla cura del look,
+        ogni appuntamento può diventare un momento
+        da dedicare a te stessa.
+      </p>
+
+      <div class="feature-list">
+
+        <div class="feature-item">
+          <span>01 · CONSULENZA</span>
+          <span>—</span>
+        </div>
+
+        <div class="feature-item">
+          <span>02 · STILE</span>
+          <span>—</span>
+        </div>
+
+        <div class="feature-item">
+          <span>03 · BEAUTY</span>
+          <span>—</span>
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
 </section>
+
+
+<!-- SERVICES -->
 
 <section class="services" id="servizi">
 
-  <div class="section-title">
-    <h2>I nostri servizi</h2>
-  </div>
+  <div class="container">
 
-  <div class="cards">
+    <div class="services-heading">
 
-    <div class="card">
-      <div class="number">01</div>
-      <h3>Taglio</h3>
+      <h2>
+        Servizi
+      </h2>
+
       <p>
-        Cura e attenzione per valorizzare il tuo stile.
+        Una selezione di servizi pensati per valorizzare
+        il tuo look e accompagnarti nella scelta
+        dello stile più adatto a te.
       </p>
+
     </div>
 
-    <div class="card">
-      <div class="number">02</div>
-      <h3>Styling</h3>
-      <p>
-        Un look pensato per esprimere la tua personalità.
-      </p>
-    </div>
+    <div class="service-grid">
 
-    <div class="card">
-      <div class="number">03</div>
-      <h3>Hair Care</h3>
-      <p>
-        Attenzione alla bellezza e alla cura dei tuoi capelli.
-      </p>
+      <article class="service">
+
+        <div class="service-number">01</div>
+
+        <h3>Hair Style</h3>
+
+        <p>
+          Un look studiato in base alle tue esigenze,
+          alla tua personalità e al risultato che desideri.
+        </p>
+
+      </article>
+
+      <article class="service">
+
+        <div class="service-number">02</div>
+
+        <h3>Beauty</h3>
+
+        <p>
+          Cura e attenzione ai dettagli per completare
+          la tua esperienza di bellezza.
+        </p>
+
+      </article>
+
+      <article class="service">
+
+        <div class="service-number">03</div>
+
+        <h3>Make Up</h3>
+
+        <p>
+          Un servizio beauty disponibile presso Hair Chic.
+        </p>
+
+      </article>
+
+      <article class="service">
+
+        <div class="service-number">04</div>
+
+        <h3>Consulenza</h3>
+
+        <p>
+          Prima di scegliere il tuo prossimo look,
+          prenditi il tempo per parlare delle tue esigenze.
+        </p>
+
+      </article>
+
+      <article class="service">
+
+        <div class="service-number">05</div>
+
+        <h3>Il tuo Look</h3>
+
+        <p>
+          Un momento dedicato a te, dal primo contatto
+          fino al risultato finale.
+        </p>
+
+      </article>
+
+      <article class="service">
+
+        <div class="service-number">06</div>
+
+        <h3>Appuntamento</h3>
+
+        <p>
+          Contattaci per conoscere disponibilità,
+          servizi e informazioni.
+        </p>
+
+      </article>
+
     </div>
 
   </div>
 
 </section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery" id="galleria">
+
+  <div class="container">
+
+    <div class="gallery-header">
+
+      <div class="section-label">
+        Inspiration
+      </div>
+
+      <h2>
+        Il mondo<br>
+        Hair Chic.
+      </h2>
+
+      <p>
+        Una selezione visiva per raccontare atmosfera,
+        stile e bellezza.
+      </p>
+
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+
+        <img
+          src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=90"
+          alt="Hair style"
+        >
+
+        <div class="gallery-overlay">
+          <span>Hair Style</span>
+        </div>
+
+      </div>
+
+      <div class="gallery-item">
+
+        <img
+          src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=90"
+          alt="Beauty salon"
+        >
+
+        <div class="gallery-overlay">
+          <span>Beauty</span>
+        </div>
+
+      </div>
+
+      <div class="gallery-item">
+
+        <img
+          src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=90"
+          alt="Hair salon"
+        >
+
+        <div class="gallery-overlay">
+          <span>Details</span>
+        </div>
+
+      </div>
+
+      <div class="gallery-item">
+
+        <img
+          src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=900&q=90"
+          alt="Hair beauty"
+        >
+
+        <div class="gallery-overlay">
+          <span>Beauty</span>
+        </div>
+
+      </div>
+
+      <div class="gallery-item">
+
+        <img
+          src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=90"
+          alt="Hair styling"
+        >
+
+        <div class="gallery-overlay">
+          <span>Style</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- QUOTE -->
+
+<section class="quote">
+
+  <div class="quote-mark">“</div>
+
+  <h2>
+    Il tuo stile racconta chi sei.
+    Lascia che inizi da qui.
+  </h2>
+
+  <p>
+    Hair Chic · Roma
+  </p>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="booking" id="prenota">
+
+  <div class="container">
+
+    <div class="booking-grid">
+
+      <div>
+
+        <div class="section-label">
+          Prenotazioni
+        </div>
+
+        <h2>
+          Il tuo prossimo
+          appuntamento.
+        </h2>
+
+        <p>
+          Vuoi conoscere disponibilità e servizi?
+          Contatta direttamente Hair Chic
+          e organizza il tuo prossimo appuntamento.
+        </p>
+
+      </div>
+
+      <div class="booking-card">
+
+        <h3>
+          Prenota ora
+        </h3>
+
+        <div class="booking-row">
+          <span>Telefono</span>
+          <strong>06 9727 6248</strong>
+        </div>
+
+        <div class="booking-row">
+          <span>Indirizzo</span>
+          <strong>Via Emanuele Filiberto 24</strong>
+        </div>
+
+        <div class="booking-row">
+          <span>Orari</span>
+          <strong>Lun — Sab · 09 — 19</strong>
+        </div>
+
+        <a
+          href="tel:0697276248"
+          class="btn btn-gold"
+        >
+          Chiama per prenotare
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
 
 <section class="contact" id="contatti">
 
-  <h2>Vieni a trovarci.</h2>
+  <div class="contact-top">
 
-  <div class="contact-info">
-
-    <div>
-      <strong>INDIRIZZO</strong><br>
-      Via Emanuele Filiberto 24, Roma
+    <div class="section-label">
+      Dove trovarci
     </div>
 
-    <div>
-      <strong>TELEFONO</strong><br>
-      06 9727 6248
+    <h2>
+      Vieni a trovarci.
+    </h2>
+
+    <p>
+      Siamo a Roma, in Via Emanuele Filiberto 24.
+    </p>
+
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="contact-info">
+
+      <div class="info-block">
+
+        <label>Indirizzo</label>
+
+        <p>
+          Via Emanuele Filiberto 24<br>
+          00185 Roma RM
+        </p>
+
+      </div>
+
+      <div class="info-block">
+
+        <label>Telefono</label>
+
+        <a href="tel:0697276248">
+          06 9727 6248
+        </a>
+
+      </div>
+
+      <div class="info-block">
+
+        <label>Orari</label>
+
+        <p class="hours">
+          Lunedì — 09:00 / 19:00<br>
+          Martedì — 09:00 / 19:00<br>
+          Mercoledì — 09:00 / 19:00<br>
+          Giovedì — 09:00 / 19:00<br>
+          Venerdì — 09:00 / 19:00<br>
+          Sabato — 09:00 / 19:00<br>
+          Domenica — Chiuso
+        </p>
+
+      </div>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Via+Emanuele+Filiberto+24+Roma"
+        target="_blank"
+        class="btn btn-gold"
+      >
+        Apri su Google Maps
+      </a>
+
     </div>
 
-    <div>
-      <strong>ORARI</strong><br>
-      Lunedì – Sabato · 09:00 – 19:00<br>
-      Domenica · Chiuso
+    <div class="map">
+
+      <iframe
+        src="https://www.google.com/maps?q=Via%20Emanuele%20Filiberto%2024%2C%20Roma&output=embed"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
     </div>
 
   </div>
 
-  <a class="button" href="tel:0697276248">
-    Chiama Hair Chic
-  </a>
-
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
-  © Hair Chic · Roma
+
+  <div class="footer-top">
+
+    <div class="footer-logo">
+      HAIR CHIC
+    </div>
+
+    <div class="footer-copy">
+      Beauty & Hair<br>
+      Via Emanuele Filiberto 24 · Roma<br>
+      06 9727 6248
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 Hair Chic
+    </span>
+
+    <span>
+      Roma · Italia
+    </span>
+
+  </div>
+
 </footer>
+
+
+<!-- FLOATING BOOKING -->
+
+<a
+  href="tel:0697276248"
+  class="floating-book"
+>
+  Prenota<br>ora
+</a>
+
+
+<script>
+
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+
+  if(window.scrollY > 50){
+    header.classList.add("scrolled");
+  }else{
+    header.classList.remove("scrolled");
+  }
+
+});
+
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("nav");
+
+menuBtn.addEventListener("click", () => {
+  nav.classList.toggle("open");
+});
+
+document.querySelectorAll("nav a").forEach(link => {
+
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+  });
+
+});
+
+</script>
 
 </body>
 </html>
